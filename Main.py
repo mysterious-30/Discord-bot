@@ -5,6 +5,8 @@ import logging
 import pytz
 from datetime import datetime, timedelta
 import re
+from flask import Flask
+import threading
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, filename='discord.log', format='%(asctime)s - %(message)s')
@@ -26,6 +28,19 @@ FAREWELL_CHANNEL_ID = 1234567890  # Example ID (Replace with actual)
 
 # Timezone setup
 IST = pytz.timezone('Asia/Kolkata')
+
+# Flask keep-alive setup
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running!"  # Simple response to keep the bot alive
+
+def run_flask():
+    app.run(host="0.0.0.0", port=8080)
+
+# Start Flask server in a separate thread
+threading.Thread(target=run_flask).start()
 
 # Define a command to log bot activity
 @bot.event
