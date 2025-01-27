@@ -128,11 +128,3 @@ This project is a versatile **Discord Bot** built using Python and the `discord.
 Contributions are welcome! If you encounter any bugs or have ideas for new features, feel free to open an issue or create a pull request.  
 
 ---
-
-## License  
-
-This project is licensed under the MIT License. See the LICENSE file for details.  
-
----
-
-Feel free to replace placeholders like `<repository-url>` or `<repository-folder>` with your actual repository details.
