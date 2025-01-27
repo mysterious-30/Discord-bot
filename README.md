@@ -1,5 +1,3 @@
----
-
 # Discord Bot with Keep-Alive
 
 This project is a Discord bot built using **Python** and the **discord.py** library. The bot provides various functionalities such as:
